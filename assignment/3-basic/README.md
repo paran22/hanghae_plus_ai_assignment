@@ -19,8 +19,9 @@
 - optimizer로는 Adam보다 Transformer에 좋은 성능을 낸다고 알려진 AdamW를 사용하였다.
 
 ## 모델 학습 결과
-- Train Accuracy: 0.8438 / Test Accuracy: 0.8553
-![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/58701fda-6daa-4fb8-abfe-54b835e29c9f)
+- Train Accuracy: 0.8468 / Test Accuracy: 0.8605
+![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/e49a3abb-8b25-4c01-8b7a-6d10f7906751)
+
 
 ## 과제 링크
 https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-basic/3-basic.ipynb
