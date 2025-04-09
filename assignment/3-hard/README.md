@@ -64,7 +64,7 @@ https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-har
 - fine tuning 후: Train Accuracy: 0.9630(62.36% 향상), Test Accuracy: 0.7812(43.08% 향상)
 - freeze를 추가하였을 때는 test accuracy가 0.68정도
 
-![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/fd772e1f-8630-4299-9091-532f79e6dd92)
+![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/de80cbf6-07f0-46bf-a57d-f836a0543c85)
 
 **과제 링크**
 https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-hard/3-hard-RoBERTa.ipynb
