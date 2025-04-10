@@ -56,13 +56,12 @@ https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-har
 - 과적합을 방지하기 위해 데이터셋 수를 5000으로 늘렸고, classifier_dropout을 0.3로, attention_probs_dropout_prob과 hidden_dropout_prob를 0.1로 설정하였다.
 - warmup scheduler를 사용하여 학습률을 점진적으로 증가시켜 더 안정적으로 학습하도록 하였다.
 - 메모리 사용량을 줄이고 학습 속도를 향상시키기 위해 Mixed Precision을 사용하고, Mixed Precision에서 발생할 수 있는 Gradient underflow를 방지하기 위해 Gradient Scaler를 적용하였다.
-- freeze layer를 추가하였을때보다 추가하지 않았을 때 더 좋은 성능을 보였다.
+- freeze layer를 추가하였을때(test accuracy 0.68 정도)보다 추가하지 않았을 때 더 좋은 성능을 보여, freeze layer를 추가하지 않고 overfitting을 방지하기 위해 dropout과 weigth decay를 추가하였다.
 
 **학습 결과**
 
 - fine tuning 전: Train Accuracy: 0.3394, Test Accuracy: 0.3504
 - fine tuning 후: Train Accuracy: 0.9630(62.36% 향상), Test Accuracy: 0.7812(43.08% 향상)
-- freeze를 추가하였을 때는 test accuracy가 0.68정도
 
 ![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/de80cbf6-07f0-46bf-a57d-f836a0543c85)
 
