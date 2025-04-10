@@ -27,7 +27,7 @@
 - epochs는 50으로 설정하고 대신 overfitting이 되지 않도록 early stopping을 적용하였다. test accuracy가 일정 수준 이상 증가하지 않거나, train accuracy가 0.95 이상이면 학습을 중단하도록 하였다.
 - optimizer로는 Adam보다 Transformer에 좋은 성능을 낸다고 알려진 AdamW를 사용하였다.
 
-##### 1. DistilBERT
+#### 1. DistilBERT
 
 **모델 설계**
 
@@ -48,7 +48,7 @@
 
 https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-hard/3-hard.ipynb
 
-##### 2. RoBERTa
+#### 2. RoBERTa
 
 **모델 설계**
 
