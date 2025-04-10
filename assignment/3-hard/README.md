@@ -56,7 +56,11 @@ https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-har
 - 과적합을 방지하기 위해 데이터셋 수를 5000으로 늘렸고, classifier_dropout을 0.3로, attention_probs_dropout_prob과 hidden_dropout_prob를 0.1로 설정하였다.
 - warmup scheduler를 사용하여 학습률을 점진적으로 증가시켜 더 안정적으로 학습하도록 하였다.
 - 메모리 사용량을 줄이고 학습 속도를 향상시키기 위해 Mixed Precision을 사용하고, Mixed Precision에서 발생할 수 있는 Gradient underflow를 방지하기 위해 Gradient Scaler를 적용하였다.
+
+#### freeze 
 - freeze layer를 추가하였을때(test accuracy 0.68 정도)보다 추가하지 않았을 때 더 좋은 성능을 보여, freeze layer를 추가하지 않은 경우와, gradual unfreeze를 적용한 경우를 모두 테스트해보았다.
+- freeze layer를 추가하지 않은 경우에는 좀 더 빠르게 학습이 끝났고, gradual unfreeze의 경우 조금 더 학습이 오래걸렸다.
+- 학습이 끝난 후 test accuracy는 비슷했지만 unfreeze layer가 전체 레이어의 개수에서 절반이 될 때부터 급격하게 accuracy가 올라가는 양상을 보였다(어떻게 해석을 해야할까??).
 
 **1) freeze 하지 않은 경우**
 **학습 결과**
@@ -64,7 +68,7 @@ https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-har
 - fine tuning 전: Train Accuracy: 0.3362, Test Accuracy: 0.3438
 - fine tuning 후: Train Accuracy: 0.9660(62.98% 향상), Test Accuracy: 0.7838(44.00% 향상)
 
-![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/de80cbf6-07f0-46bf-a57d-f836a0543c85)
+![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/a1353261-ad15-4f2d-abde-fd2908f88e29)
 
 **2) gradual unfreeze 적용**
 
@@ -72,6 +76,9 @@ https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-har
 
 - fine tuning 전: Train Accuracy: 0.3396, Test Accuracy: 0.3504
 - fine tuning 후: Train Accuracy: 0.9538(61.42% 향상), Test Accuracy: 0.7760(42.62% 향상)
+
+
+![epoch 당 loss, train accuracy, test accuracy 변화 그래프](https://github.com/user-attachments/assets/222aea04-1270-43c7-9957-ef6a10a40a7d)
 
 **과제 링크**
 https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/3-hard/3-hard-RoBERTa.ipynb
