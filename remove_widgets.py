@@ -1,6 +1,6 @@
 import json
 
-file_path = "./assignment/3-basic.ipynb"
+file_path = "./assignment/3-hard-RoBERTa.ipynb"
 
 # 파일 읽기
 with open(file_path, 'r', encoding='utf-8') as file:
