@@ -1,5 +1,6 @@
 ## [5주차] 심화과제 - 다양한 형태의 입력을 가지는 LLM 서비스 개발
 [과제코드](https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/5-hard/5-hard.ipynb)
+[data source](https://github.com/paran22/hanghae_plus_ai_assignment/blob/main/assignment/5-hard/library_books.json)
 
 주제 : 도서 추천 챗봇
 
