@@ -5,9 +5,14 @@
 #### 과제 코드
 
 [ChatBot](https://github.com/paran22/gpt_chatbot/blob/feature/with-image-uploader/src/components/ChatBot.tsx)
+
 [ImageUploader](https://github.com/paran22/gpt_chatbot/blob/feature/with-image-uploader/src/components/ImageUploader.tsx)
+
 [LLM](https://github.com/paran22/gpt_chatbot/blob/feature/with-image-uploader/src/app/api/chat/route.ts)
 
 #### 과제 시연 영상
 
 - 강아지와 고양이 사진을 업로드하고, 공통점과 차이점에 대하여 질의응답을 진행
+
+https://github.com/user-attachments/assets/7fb31e82-c7d5-4e72-8c7c-58c7cf14b915
+
