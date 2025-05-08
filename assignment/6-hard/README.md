@@ -51,7 +51,15 @@ A: 가볍게 읽을 수 있는 책
 - 방법1) 사용자의 질의와 유사한 독서 이력 검색 + 사용자의 취향 정보를 바탕으로 query문 생성 -> 도서 정보 벡터 db에서 유사한 도서 리스트 검색 -> llm에서 최종 추천 도서 선정
 - 방법2) 사용자의 질의와 유사한 독서 이력 검색 + 사용자의 취향 정보 + 벡터 db에서 유사한 도서 리스트 검색 -> 프롬프트에 포함하여 llm에서 최종 추천 도서 선정
 
-#### 테스트 시연 영상(방법1)
+#### Repository
 
-[Backend](https://github.com/paran22/book-recommendation-backend)
-[Frontend](https://github.com/paran22/book-recommendation-frontend)
+[Backend Repo](https://github.com/paran22/book-recommendation-backend)
+
+[Frontend Repo](https://github.com/paran22/book-recommendation-frontend)
+
+#### 테스트 시연 영상(방법1 적용)
+
+
+https://github.com/user-attachments/assets/0ba92243-fb76-4cef-9025-12c1160cf99c
+
+
