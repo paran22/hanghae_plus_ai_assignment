@@ -3,3 +3,5 @@
 .env
 
 /python-learning/gen-lang-client-0535738111-de65aad16efa.json
+
+**/wandb/
