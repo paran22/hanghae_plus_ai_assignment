@@ -14,10 +14,14 @@
 | 256       | 1.6777     | 3321.6138     | 1.55125   | 54.5512      | 3.4 GB    |
 
 **train/loss**
+
 https://api.wandb.ai/links/knospe1-gaeun/fbbgznur
+![train_loss](https://github.com/user-attachments/assets/93a7b99a-2129-46da-a02c-65ef30ec7bf7)
 
 **eval/loss**
+
 https://api.wandb.ai/links/knospe1-gaeun/d3alfy60
+![eval_loss](https://github.com/user-attachments/assets/f2093a82-dda5-4c79-9a0b-bb10264e53b9)
 
 - rank를 증가시키면 학습 성능이 향상되는 것을 확인하였다. 그러나 128과 256의 경우 train loss와 eval loss가 비슷하게 유지되었다.
 - rank를 증가시키면 runtime은 증가하고, 메모리 점유율도 증가하는 것을 확인하였다.
