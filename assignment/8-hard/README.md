@@ -38,7 +38,9 @@ RAG + GPT API 사용
 
 **RAG DATA**
 국립중앙도서관 사서추천도서 (./data/library_books.json)
+
 사용자가 읽은 책 정보 (./data/test-case/user_reading_history.json)
+
 사용자의 책 취향 정보 (./data/test-case/user_reading_preferences.json)
 
 **방법1: RAG 기반 추천 로직**
@@ -89,11 +91,25 @@ colab 무료 버전에서 LoRA를 사용해서 더 큰 모델 사용
 colab 무료버전에서는 gpt-large 모델 out of memory로 사용 불가
 
 LoRA를 적용하여 gpt2-lg gpt2-xl, facebook/opt-1.3b, gemma-2b-it 모델 사용 가능 확인
+-> 경량화를 통해 동일한 환경에서도 더 큰 모델을 사용할 수 있다는 것을 확인할 수 있음
 
-| 모델              | train/loss         | train/runtime | eval/loss         | eval/runtime |
-| ----------------- | ------------------ | ------------- | ----------------- | ------------ |
-| gemma-2b-it       | 3.1014             | 48.3997       | 3.05684232711792  | 1.0529       |
-| facebook/opt-1.3b | 1.402118593851725  | 59.7179       | 1.163001298904419 | 0.6428       |
-| gpt2-xl           | 1.5866142463684083 | 87.9429       | 1.267969012260437 | 1.1709       |
+| 모델              | train/loss         | train/runtime | eval/loss         | eval/runtime | Max alloc |
+| ----------------- | ------------------ | ------------- | ----------------- | ------------ | --------- |
+| gemma-2b-it       | 3.1014             | 48.3997       | 3.05684232711792  | 1.0529       | 8.2 GB    |
+| facebook/opt-1.3b | 1.402118593851725  | 59.7179       | 1.163001298904419 | 0.6428       | 3.4 GB    |
+| gpt2-xl           | 1.5866142463684083 | 87.9429       | 1.267969012260437 | 1.1709       |           |
 
-경량화를 통해 동일한 환경에서도 더 큰 모델을 사용할 수 있다는 것을 확인할 수 있음
+![W B Chart 2025  5  22  오전 10_02_41](https://github.com/user-attachments/assets/571c23dd-cf3f-4402-be66-c30e75305bce)
+
+![W B Chart 2025  5  22  오전 10_02_31](https://github.com/user-attachments/assets/7609a86f-5652-4d63-8355-55d068ca66b1)
+
+모델에 따라 runtime과 loss는 다르게 확인됨
+- 테스트한 모델 중 가장 큰 모델인 gemma-2b-it은 loss는 다른 모델들과 다르게 높게 나옴
+- facebook/opt-1.3b와 gpt2-xl는 유사한 loss 확인됨
+- runtime은 gemma-2b-it와 gpt2-xl가 유사하고, facebook/opt-1.3b이 가장 낮게 나옴
+-> 동일한 LoRA 코드를 사용했기 때문에 학습률, batch size 등 모델별 최적화가 필요
+  loss만으로 성능을 판단하기는 어려우며, 성능에 대한 추가 검토 필요함
+
+
+
+
