@@ -33,15 +33,16 @@
    - 이 책이 도움이 될 수 있는 이유: 시를 통해 감정을 표현하고 이해하는 과정은 독자에게 큰 위로가 될 수 있으며, 잠들기 전 편안한 마음으로 읽기 좋습니다. 각 시가 독자의 감정에 깊이 다가가 안정감을 줄 것입니다.
 
 #### ✅ 구현 방법
-
 RAG + GPT API 사용
 
+
 **RAG DATA**
-국립중앙도서관 사서추천도서 (./data/library_books.json)
 
-사용자가 읽은 책 정보 (./data/test-case/user_reading_history.json)
+- 국립중앙도서관 사서추천도서 (./data/library_books.json)
 
-사용자의 책 취향 정보 (./data/test-case/user_reading_preferences.json)
+- 사용자가 읽은 책 정보 (./data/test-case/user_reading_history.json)
+
+- 사용자의 책 취향 정보 (./data/test-case/user_reading_preferences.json)
 
 **방법1: RAG 기반 추천 로직**
 
@@ -107,7 +108,7 @@ LoRA를 적용하여 gpt2-lg gpt2-xl, facebook/opt-1.3b, gemma-2b-it 모델 사�
 - 테스트한 모델 중 가장 큰 모델인 gemma-2b-it은 loss는 다른 모델들과 다르게 높게 나옴
 - facebook/opt-1.3b와 gpt2-xl는 유사한 loss 확인됨
 - runtime은 gemma-2b-it와 gpt2-xl가 유사하고, facebook/opt-1.3b이 가장 낮게 나옴
--> 동일한 LoRA 코드를 사용했기 때문에 학습률, batch size 등 모델별 최적화가 필요
+-> 동일한 LoRA 코드를 사용했기 때문에 학습률, batch size 등 모델별 최적화가 필요.
   loss만으로 성능을 판단하기는 어려우며, 성능에 대한 추가 검토 필요함
 
 
